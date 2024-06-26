@@ -25,6 +25,8 @@ namespace Mapper
 
         #endregion
 
+        #region Tbl_Blog
+
         public static Tbl_Blog Change(this BlogRequestModel requestModel)
         {
             return new Tbl_Blog
@@ -34,6 +36,10 @@ namespace Mapper
                 BlogContent = requestModel.BlogContent
             };
         }
-        }
+
+        #endregion
+
+
+    }
     
 }
