@@ -73,6 +73,8 @@ namespace BusinessLogic
 
         #endregion
 
+        #region DeleteBlog
+
         public async Task<int> DeleteBlog(int id)
         {
             try
@@ -81,10 +83,12 @@ namespace BusinessLogic
                     throw new Exception("Id is invaild");
                 return await _dA_blog.DeleteBlog(id);
             }
-             catch (Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
         }
+
+        #endregion
     }
 }
