@@ -16,6 +16,8 @@ namespace BusinessLogic
         {
             _dA_blog = dA_blog;
         }
+
+        #region GetBlogs
         public async Task<BlogListResponseModel> GetBlogs()
         {
             try
@@ -27,6 +29,9 @@ namespace BusinessLogic
                 throw new Exception(ex.Message);
             }
         }
+
+        #endregion
+
         public async Task<int>CreateBlog(BlogRequestModel requestModel)
         {
             try

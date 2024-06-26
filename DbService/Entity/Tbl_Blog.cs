@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DbService.Entity
 {
-    [Table("Blog")]
+    [Table("Tbl_Blog")]
     public class Tbl_Blog
     {
         [Key]

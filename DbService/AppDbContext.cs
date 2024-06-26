@@ -14,7 +14,7 @@ namespace DbService
         {
         }
 
-        public DbSet<Tbl_Blog>  Blogs { get; set; }
+        public DbSet<Tbl_Blog>  Blogs{ get; set; }
 
     }
 }
