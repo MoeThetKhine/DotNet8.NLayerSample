@@ -10,17 +10,22 @@ namespace Mapper
 {
     public static class ChangeModel
         {
-            public static BlogModel Change(this Tbl_Blog  dataModel)
+        #region BlogModel
+
+        public static BlogModel Change(this Tbl_Blog dataModel)
+        {
+            return new BlogModel
             {
-                return new BlogModel
-                {
-                    BlogId = dataModel.BlogId,
-                    BlogTitle = dataModel.BlogTitle,
-                    BlogAuthor = dataModel.BlogAuthor,
-                    BlogContent = dataModel.BlogContent,
-                };
-            } 
-            public static Tbl_Blog Change(this BlogRequestModel requestModel)
+                BlogId = dataModel.BlogId,
+                BlogTitle = dataModel.BlogTitle,
+                BlogAuthor = dataModel.BlogAuthor,
+                BlogContent = dataModel.BlogContent,
+            };
+        }
+
+        #endregion
+
+        public static Tbl_Blog Change(this BlogRequestModel requestModel)
         {
             return new Tbl_Blog
             {
