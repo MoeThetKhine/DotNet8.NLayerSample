@@ -55,7 +55,9 @@ namespace BusinessLogic
 
         #endregion
 
-        public async Task<int> PatchBlog(BlogRequestModel requestModel,int id)
+        #region PatchBlog
+
+        public async Task<int> PatchBlog(BlogRequestModel requestModel, int id)
         {
             try
             {
@@ -67,8 +69,10 @@ namespace BusinessLogic
             {
                 throw new Exception(ex.Message);
             }
-
         }
+
+        #endregion
+
         public async Task<int> DeleteBlog(int id)
         {
             try
