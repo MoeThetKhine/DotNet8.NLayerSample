@@ -18,6 +18,8 @@ namespace DataAccess.Services
         {
             _appDbContext = appDbContext;
         }
+        #region GetBlogs
+
         public async Task<BlogListResponseModel> GetBlogs()
         {
             try
@@ -29,7 +31,7 @@ namespace DataAccess.Services
 
                 BlogListResponseModel responseModel = new()
                 {
-                    DataLst =lst.Select(x => x.Change()).ToList(),
+                    DataLst = lst.Select(x => x.Change()).ToList(),
                 };
                 return responseModel;
             }
@@ -38,6 +40,9 @@ namespace DataAccess.Services
                 throw new Exception(ex.Message);
             }
         }
+
+        #endregion
+
         public async Task<int>CreateBlog(BlogRequestModel requestModel)
         {
             try
