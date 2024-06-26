@@ -95,8 +95,9 @@ namespace DataAccess.Services
 
         #endregion
 
+        #region DeleteBlog
 
-        public async Task<int>DeleteBlog(int id)
+        public async Task<int> DeleteBlog(int id)
         {
             try
             {
@@ -112,5 +113,10 @@ namespace DataAccess.Services
                 throw new Exception(ex.Message);
             }
         }
+
+        #endregion
+
+
+
     }
 }
