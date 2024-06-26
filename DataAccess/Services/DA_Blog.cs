@@ -60,14 +60,17 @@ namespace DataAccess.Services
 
         #endregion
 
-        public async Task<int> PatchBlog(BlogRequestModel requestModel,int id)
+        #region PatchBlog
+
+        public async Task<int> PatchBlog(BlogRequestModel requestModel, int id)
         {
             try
             {
                 var item = await _appDbContext.Blogs
                     .AsNoTracking()
-                    .FirstOrDefaultAsync(x => x.BlogId == id) 
+                    .FirstOrDefaultAsync(x => x.BlogId == id)
                     ?? throw new Exception("No Data Found");
+
                 if (!string.IsNullOrEmpty(requestModel.BlogTitle))
                 {
                     item.BlogTitle = requestModel.BlogTitle;
@@ -76,7 +79,7 @@ namespace DataAccess.Services
                 {
                     item.BlogAuthor = requestModel.BlogAuthor;
                 }
-                if(!string.IsNullOrEmpty(requestModel.BlogContent))
+                if (!string.IsNullOrEmpty(requestModel.BlogContent))
                 {
                     item.BlogContent = requestModel.BlogContent;
                 }
@@ -89,6 +92,10 @@ namespace DataAccess.Services
                 throw new Exception(ex.Message);
             }
         }
+
+        #endregion
+
+
         public async Task<int>DeleteBlog(int id)
         {
             try
