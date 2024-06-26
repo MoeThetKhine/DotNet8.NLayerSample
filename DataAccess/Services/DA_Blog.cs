@@ -43,7 +43,9 @@ namespace DataAccess.Services
 
         #endregion
 
-        public async Task<int>CreateBlog(BlogRequestModel requestModel)
+        #region CreateBlog
+
+        public async Task<int> CreateBlog(BlogRequestModel requestModel)
         {
             try
             {
@@ -55,6 +57,9 @@ namespace DataAccess.Services
                 throw new Exception(ex.Message);
             }
         }
+
+        #endregion
+
         public async Task<int> PatchBlog(BlogRequestModel requestModel,int id)
         {
             try
