@@ -16,6 +16,7 @@ namespace PresentationLayer.Controllers
         {
             _bL_Blog = bL_Blog;
         }
+        #region HttpGet
         [HttpGet]
         public async Task<IActionResult> GetBlog()
         {
@@ -23,11 +24,22 @@ namespace PresentationLayer.Controllers
             {
                 return Content(await _bL_Blog.GetBlogs());
             }
-            catch(Exception ex)
-            { 
+            catch (Exception ex)
+            {
                 throw new Exception(ex.Message);
             }
         }
+        #endregion
+
+        #region HttpGet
+        #endregion
+
+        #region HttpGet
+        #endregion
+
+        #region HttpGet
+        #endregion
+
         [HttpPost]
         public async Task<IActionResult> CreateBlog([FromBody] BlogRequestModel requestModel)
         {
