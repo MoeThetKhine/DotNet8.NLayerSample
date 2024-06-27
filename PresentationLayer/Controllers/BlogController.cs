@@ -49,19 +49,14 @@ namespace PresentationLayer.Controllers
 
         #endregion
 
-        #region HttpGet
-        #endregion
-
-        #region HttpGet
-        #endregion
-
+        #region HttpPatch
 
         [HttpPatch("id")]
-        public async Task<IActionResult> PatchBlog([FromBody]BlogRequestModel requestModel,int id)
+        public async Task<IActionResult> PatchBlog([FromBody] BlogRequestModel requestModel, int id)
         {
             try
             {
-                int result = await _bL_Blog.PatchBlog(requestModel,id);
+                int result = await _bL_Blog.PatchBlog(requestModel, id);
                 return result > 0 ? Updated() : BadRequest(MessageResource.SaveFail);
             }
             catch (Exception ex)
@@ -69,6 +64,13 @@ namespace PresentationLayer.Controllers
                 throw new Exception(ex.Message);
             }
         }
+        #endregion
+
+        #region HttpGet
+        #endregion
+
+
+
         [HttpDelete]
         public async Task<IActionResult>DeleteBlog(int id)
         {
