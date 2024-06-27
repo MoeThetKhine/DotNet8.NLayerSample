@@ -66,13 +66,10 @@ namespace PresentationLayer.Controllers
         }
         #endregion
 
-        #region HttpGet
-        #endregion
-
-
+        #region HttpDelete
 
         [HttpDelete]
-        public async Task<IActionResult>DeleteBlog(int id)
+        public async Task<IActionResult> DeleteBlog(int id)
         {
             try
             {
@@ -85,5 +82,10 @@ namespace PresentationLayer.Controllers
                 throw new Exception(ex.Message);
             }
         }
+        #endregion
+
+
+
+
     }
 }
