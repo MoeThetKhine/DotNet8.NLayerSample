@@ -31,15 +31,7 @@ namespace PresentationLayer.Controllers
         }
         #endregion
 
-        #region HttpGet
-        #endregion
-
-        #region HttpGet
-        #endregion
-
-        #region HttpGet
-        #endregion
-
+        #region HttpPost
         [HttpPost]
         public async Task<IActionResult> CreateBlog([FromBody] BlogRequestModel requestModel)
         {
@@ -54,6 +46,16 @@ namespace PresentationLayer.Controllers
                 throw new Exception(ex.Message);
             }
         }
+
+        #endregion
+
+        #region HttpGet
+        #endregion
+
+        #region HttpGet
+        #endregion
+
+
         [HttpPatch("id")]
         public async Task<IActionResult> PatchBlog([FromBody]BlogRequestModel requestModel,int id)
         {
