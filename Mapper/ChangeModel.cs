@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Mapper
 {
     public static class ChangeModel
-        {
+    {
         #region BlogModel
 
         public static BlogModel Change(this Tbl_Blog dataModel)
