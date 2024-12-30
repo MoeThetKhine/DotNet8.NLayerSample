@@ -11,6 +11,7 @@ public class BlogController : BaseController
         _bL_Blog = bL_Blog;
     }
     #region HttpGet
+
     [HttpGet]
     public async Task<IActionResult> GetBlog()
     {
@@ -23,6 +24,7 @@ public class BlogController : BaseController
             throw new Exception(ex.Message);
         }
     }
+
     #endregion
 
     #region HttpPost
