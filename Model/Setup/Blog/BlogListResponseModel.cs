@@ -1,7 +1,6 @@
-﻿namespace Model.Setup.Blog
+﻿namespace Model.Setup.Blog;
+
+public class BlogListResponseModel
 {
-    public class BlogListResponseModel
-    {
-        public List<BlogModel> DataLst { get; set; }
-    }
+    public List<BlogModel> DataLst { get; set; }
 }
