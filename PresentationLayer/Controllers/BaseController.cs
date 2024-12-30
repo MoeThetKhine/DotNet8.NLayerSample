@@ -4,10 +4,16 @@
 [ApiController]
 public class BaseController : ControllerBase
 {
+    #region Content
+
     protected IActionResult Content(object? obj) 
     {
         return StatusCode(200, JsonConvert.SerializeObject(obj));
     }
+
+    #endregion
+
+
     protected IActionResult Created()
     {
         return StatusCode(201, MessageResource.SaveSuccess);
