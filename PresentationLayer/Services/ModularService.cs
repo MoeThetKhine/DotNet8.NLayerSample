@@ -2,6 +2,8 @@
 
 public static class ModularService
 {
+    #region AddServices
+
     public static IServiceCollection AddServices(this IServiceCollection services, WebApplicationBuilder builder)
     {
         services.AddDbContextService(builder);
@@ -9,8 +11,9 @@ public static class ModularService
         services.AddDataAccessServices();
         services.AddJsonServices();
         return services;
-
     }
+
+    #endregion
 
     private static IServiceCollection AddDbContextService(this IServiceCollection services, WebApplicationBuilder builder)
     {
