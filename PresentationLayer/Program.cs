@@ -1,7 +1,3 @@
-using DbService;
-using Microsoft.EntityFrameworkCore;
-using PresentationLayer.Services;
-
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -9,8 +5,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddServices(builder);
-
-
 
 var app = builder.Build();
 
