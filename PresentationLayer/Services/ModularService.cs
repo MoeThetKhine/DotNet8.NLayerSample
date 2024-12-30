@@ -38,11 +38,16 @@ public static class ModularService
 
     #endregion
 
+    #region AddBusinessLogicServices
+
     private static IServiceCollection AddDataAccessServices(this IServiceCollection services)
     {
         services.AddScoped<DA_Blog>();
         return services;
     }
+
+    #endregion
+
     private static IServiceCollection AddJsonServices(this IServiceCollection services)
     {
         services.AddControllers().AddJsonOptions(opt =>
