@@ -1,5 +1,7 @@
 ﻿namespace Mapper;
 
+#region ChangeModel
+
 public static class ChangeModel
 {
     #region BlogModel
@@ -32,3 +34,4 @@ public static class ChangeModel
     #endregion
 }
 
+#endregion
