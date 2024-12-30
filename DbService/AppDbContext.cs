@@ -7,5 +7,4 @@ public class AppDbContext : DbContext
     }
 
     public DbSet<Tbl_Blog>  Blogs{ get; set; }
-
 }
