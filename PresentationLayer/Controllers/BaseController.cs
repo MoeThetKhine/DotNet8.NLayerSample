@@ -13,11 +13,16 @@ public class BaseController : ControllerBase
 
     #endregion
 
+    #region Created
 
     protected IActionResult Created()
     {
         return StatusCode(201, MessageResource.SaveSuccess);
     }
+
+    #endregion
+
+
     protected IActionResult Updated()
     {
         return StatusCode(202, MessageResource.SaveSuccess);
