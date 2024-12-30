@@ -31,9 +31,14 @@ public class BaseController : ControllerBase
 
     #endregion
 
+    #region Deleted
 
     protected IActionResult Deleted()
     {
         return StatusCode(202, MessageResource.DeleteSuccess);
     }
+
+    #endregion
+
 }
+
