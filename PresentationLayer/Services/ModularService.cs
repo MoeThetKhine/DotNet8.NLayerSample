@@ -1,9 +1,4 @@
-﻿using BusinessLogic;
-using DataAccess.Services;
-using DbService;
-using Microsoft.EntityFrameworkCore;
-
-namespace PresentationLayer.Services
+﻿namespace PresentationLayer.Services
 {
     public static class ModularService
     {
