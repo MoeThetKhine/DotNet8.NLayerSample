@@ -1,12 +1,11 @@
-﻿namespace DbService
+﻿namespace DbService;
+
+public class AppDbContext : DbContext 
 {
-    public class AppDbContext : DbContext 
+    public AppDbContext(DbContextOptions options) : base(options)
     {
-        public AppDbContext(DbContextOptions options) : base(options)
-        {
-        }
-
-        public DbSet<Tbl_Blog>  Blogs{ get; set; }
-
     }
+
+    public DbSet<Tbl_Blog>  Blogs{ get; set; }
+
 }
