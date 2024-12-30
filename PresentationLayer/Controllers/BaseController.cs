@@ -20,9 +20,5 @@
         {
             return StatusCode(202, MessageResource.DeleteSuccess);
         }
-
-
-
-
     }
 }
