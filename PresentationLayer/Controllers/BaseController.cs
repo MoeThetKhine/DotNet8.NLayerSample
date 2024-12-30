@@ -1,9 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using PresentationLayer.Resources;
-
-namespace PresentationLayer.Controllers
+﻿namespace PresentationLayer.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
