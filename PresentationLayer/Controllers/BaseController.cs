@@ -22,11 +22,16 @@ public class BaseController : ControllerBase
 
     #endregion
 
+    #region Updated
 
     protected IActionResult Updated()
     {
         return StatusCode(202, MessageResource.SaveSuccess);
     }
+
+    #endregion
+
+
     protected IActionResult Deleted()
     {
         return StatusCode(202, MessageResource.DeleteSuccess);
