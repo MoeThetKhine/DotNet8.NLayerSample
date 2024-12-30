@@ -15,6 +15,8 @@ public static class ModularService
 
     #endregion
 
+    #region AddDbContextService
+
     private static IServiceCollection AddDbContextService(this IServiceCollection services, WebApplicationBuilder builder)
     {
         builder.Services.AddDbContext<AppDbContext>(opt =>
@@ -22,8 +24,10 @@ public static class ModularService
             opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
         }, ServiceLifetime.Transient);
         return services;
-
     }
+
+    #endregion
+
     private static IServiceCollection AddBusinessLogicServices(this IServiceCollection services)
     {
         services.AddScoped<BL_Blog>();
